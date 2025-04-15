@@ -33,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
             
             try {
                 const token = localStorage.getItem("token");
-                const res = await fetch("http://localhost:5000/api/ventas/registrar", {
+                const res = await fetch("/api/ventas/registrar", {
                     method: "POST",
                     headers: { 
                         "Content-Type": "application/json",
@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", () => {
     async function cargarHistorial() {
         try {
             const token = localStorage.getItem("token");
-            const res = await fetch("http://localhost:5000/api/ventas/mis-ventas", {
+            const res = await fetch("/api/ventas/mis-ventas", {
                 method: "GET",
                 headers: { "x-auth-token": token }
             });
