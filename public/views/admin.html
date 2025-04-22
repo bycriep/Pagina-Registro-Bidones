@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Admin</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <h1>Panel de Administración</h1>
+        <button id="logout">Cerrar Sesión</button>
+    </header>
+
+    <!-- Filtros -->
+    <section class="filtros">
+        <div class="filtro-item">
+            <label for="filtroFecha">Filtrar por Fecha:</label>
+            <select id="filtroFecha">
+                <option value="todos">Todos</option>
+                <option value="mes">Este mes</option>
+                <option value="quincena1">Primera quincena (1 al 15)</option>
+                <option value="quincena2">Segunda quincena (16 al 31)</option>
+                <option value="dia">Hoy</option>
+            </select>
+            <select id="filtroMetodoPago">
+    <option value="">Todos</option>
+    <option value="Efectivo">Efectivo</option>
+    <option value="Transferencia">Transferencia</option>
+    <option value="Yape">Yape</option>
+    <option value="Plin">Plin</option>
+    <option value="Izipay">Izipay</option>
+    <option value="Bim">Bim</option>
+    <option value="Gratis">Gratis</option>
+    </select>
+
+        <label>
+            Solo con deuda
+            <input type="checkbox" id="filtroDeuda" />
+        </label>
+
+        </div>
+        
+        <div class="filtro-item">
+            <label for="filtroRepartidor">Filtrar por Repartidor:</label>
+            <select id="filtroRepartidor">
+                <option value="">Todos los repartidores</option>
+                <!-- Aquí se llenará con JS -->
+            </select>
+        </div>
+    </section>
+
+    <!-- Tabla de Ventas -->
+    <section class="historial">
+        <h2>Historial de Ventas</h2>
+        <table id="tablaVentas">
+            <thead>
+                <tr>
+                    <th>Cliente</th>
+                    <th>Repartidor</th>
+                    <th>Dirección</th>
+                    <th>Bidones</th>
+                    <th>Total</th>
+                    <th>Método Pago</th>
+                    <th>Nombre del pagador</th>
+                    <th>¿Tiene deuda?</th>
+                    <th>Ver comprobante</th>
+                    <th>Fecha</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los datos de la tabla se llenarán con JS -->
+            </tbody>
+        </table>
+    </section>
+
+    <!-- Estadísticas Generales -->
+    <section class="estadisticas">
+        <h2>Estadísticas Generales</h2>
+        <div class="contenedor">
+            <div class="card">
+                <h3>Total Ventas</h3>
+                <p id="totalVentas">0</p>
+            </div>
+            <div class="card">
+                <h3>Bidones Vendidos</h3>
+                <p id="totalBidones">0</p>
+            </div>
+            <div class="card">
+                <h3>Ingresos Totales</h3>
+                <p id="ingresosTotales">$0</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gráfico de Ventas -->
+    <section class="grafico">
+        <canvas id="ventasChart"></canvas>
+    </section>
+
+    <!-- Exportar Datos -->
+    <section class="acciones">
+        <h2>Exportar Datos</h2>
+        <button id="exportCSV">Exportar CSV</button>
+        <button id="exportPDF">Exportar PDF</button>
+    </section>
+
+    <!-- Script -->
+    <script src="../js/admin.js"></script>
+</body>
+
+</html>

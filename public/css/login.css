@@ -1,0 +1,120 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0a0f1d;
+    color: #e0e0e0;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+/* Contenedor principal de login */
+main {
+    background: rgba(15, 25, 45, 0.95);
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 6px 40px rgba(0, 255, 255, 0.5);
+    width: 100%;
+    max-width: 400px;
+    text-align: center; /* Espacio debajo del header */
+    z-index: 1;
+}
+
+main h2 {
+    font-size: 2.2rem;
+    color: #fff;
+    margin-bottom: 20px;
+    text-shadow: 0 0 10px #00ccff;
+}
+
+/* Estilo para los campos de entrada */
+input {
+    width: 90%;
+    padding: 15px;
+    margin: 15px 0;
+    border: 2px solid #00ccff;
+    border-radius: 8px;
+    background: rgba(10, 20, 40, 0.8);
+    color: #e0e0e0;
+    font-size: 16px;
+    transition: all 0.3s;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);
+}
+
+input:focus {
+    outline: none;
+    border-color: #ff4757;
+    background: rgba(10, 20, 40, 0.9);
+    box-shadow: 0 0 15px rgba(255, 71, 87, 0.7);
+}
+
+/* Estilo para el botón de login */
+button {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 8px;
+    background: #00ccff;
+    color: #0a0f1d;
+    font-size: 18px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 15px #00ccff;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #00aaff;
+    box-shadow: 0 0 25px #00ccff;
+    transform: scale(1.05);
+}
+
+/* Enlace para registro */
+p {
+    font-size: 1.1rem;
+    margin-top: 20px;
+    color: #e0e0e0;
+}
+
+a {
+    color: #00ccff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.no-shadow {
+    box-shadow: none !important;
+}
+
+
+a:hover {
+    text-decoration: underline;
+    color: #ff4757;
+}
+
+/* Animación para el título */
+h2 {
+    animation: neonText 1.5s ease-in-out infinite alternate;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    main {
+        padding: 30px 20px;
+    }
+
+    input, button {
+        font-size: 15px;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+}

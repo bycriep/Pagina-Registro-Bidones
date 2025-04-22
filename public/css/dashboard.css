@@ -1,0 +1,184 @@
+/* Estilos generales */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #0a0a0a; /* Fondo oscuro (negro) */
+    margin: 0;
+    padding: 0;
+    color: #fff; /* Texto blanco */
+}
+
+/* Header */
+header {
+    background: #111; /* Fondo oscuro para header */
+    color: #00e6e6; /* Texto en azul neón */
+    padding: 20px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.3);
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: bold;
+    text-shadow: 0 0 10px #00e6e6, 0 0 20px #00e6e6; /* Efecto neón en el texto */
+}
+
+header button {
+    background: #ff0066; /* Botón en rosa neón */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 0 8px #ff0066;
+}
+
+header button:hover {
+    background: #ff3385;
+    box-shadow: 0 0 20px #ff0066;
+}
+
+/* Main Section */
+main {
+    padding: 30px;
+}
+
+/* Registrar Venta */
+section {
+    text-align: center;
+    background: #1a1a1a; /* Fondo oscuro para cada sección */
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3); /* Sombra neón */
+    padding: 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    margin-bottom: 5%;
+}
+
+.section2 {
+    background: #1a1a1a; /* Fondo oscuro para cada sección */
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 255, 255, 0.3); /* Sombra neón */
+    padding: 20px;
+    max-width: 95%;
+    margin: 0 auto;
+}
+
+section h2 {
+    color: #00e6e6; /* Azul neón */
+    font-size: 22px;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px #00e6e6, 0 0 20px #00e6e6; /* Efecto neón */
+}
+
+form {
+    display: grid;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+label {
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff; /* Texto blanco */
+}
+
+input[type="text"], input[type="number"], select {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #333;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+    transition: border 0.3s;
+    background-color: #333; /* Fondo oscuro para inputs */
+    color: #fff; /* Texto blanco en inputs */
+}
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus {
+    border-color: #00e6e6; /* Resaltado en azul neón */
+    box-shadow: 0 0 8px #00e6e6; /* Efecto de neón */
+}
+
+button[type="submit"] {
+    background: #00ff00; /* Botón verde neón */
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+    width: 100%;
+    box-shadow: 0 0 8px #00ff00;
+}
+
+button[type="submit"]:hover {
+    background: #33cc33;
+    box-shadow: 0 0 20px #00ff00;
+}
+
+/* Mis Entregas */
+section table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+}
+
+table th, table td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid #444;
+    font-size: 16px;
+}
+
+table th {
+    background: #333; /* Fondo oscuro para encabezados */
+    color: #00e6e6; /* Texto azul neón */
+    text-shadow: 0 0 10px #00e6e6; /* Efecto neón */
+}
+
+table tbody tr:nth-child(even) {
+    background-color: #1a1a1a; /* Fondo oscuro en filas pares */
+}
+
+table tbody tr:hover {
+    background-color: #444; /* Resaltado en hover */
+    cursor: pointer;
+    box-shadow: 0 0 8px #00e6e6; /* Efecto neón en hover */
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header h1 {
+        margin-bottom: 10px;
+    }
+
+    section h2 {
+        font-size: 18px;
+    }
+
+    form {
+        width: 100%;
+        padding: 10px;
+    }
+
+    button[type="submit"] {
+        width: 100%;
+    }
+
+    table th, table td {
+        font-size: 14px;
+    }
+}

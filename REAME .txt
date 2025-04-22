@@ -1,0 +1,31 @@
+# Proyecto Control de Bidones
+
+Este proyecto es un sistema de control de ventas y entregas de bidones. Está desarrollado con **Node.js** y usa **MongoDB** como base de datos. A continuación, se detallan los pasos para instalar y ejecutar el proyecto en tu entorno local.
+
+## Requisitos
+
+Antes de comenzar, asegúrate de tener instalados los siguientes programas:
+
+- **Node.js** (versión 14 o superior)
+- **MongoDB** (instalado y en ejecución)
+
+## Pasos para la instalación
+
+1. **Instalar Node.js**:
+
+   Si no tienes **Node.js** instalado, ve a [nodejs.org](https://nodejs.org/) y descarga la versión recomendada para la mayoría de los usuarios. Luego sigue las instrucciones de instalación según tu sistema operativo.
+
+2. **Instalar MongoDB**:
+
+   Si aún no tienes **MongoDB** instalado, puedes descargarlo desde [aquí](https://www.mongodb.com/try/download/community). Después de la instalación, asegúrate de iniciar el servicio de MongoDB.
+
+3. **Descargar el proyecto**:
+
+   Si ya tienes el código del proyecto, simplemente colócalo en una carpeta en tu sistema. Si no, solicita el archivo completo del proyecto al propietario para obtener los archivos necesarios.
+
+4. **Instalar dependencias**:
+
+   Una vez que tengas el proyecto y **Node.js** y **MongoDB** instalados, abre una terminal en la carpeta del proyecto y ejecuta el siguiente comando para instalar las dependencias de **Node.js**:
+
+   ```bash
+   npm install

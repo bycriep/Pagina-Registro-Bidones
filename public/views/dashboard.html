@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Repartidor | Control de Bidones</title>
+    <link rel="stylesheet" href="../css/dashboard.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <header>
+        <h1>Bienvenido, <span id="nombreRepartidor"></span></h1>
+        <button id="logout">Cerrar Sesión</button>
+    </header>
+    <main>
+        <section>
+            <h2>Registrar Venta</h2>
+            <form id="formVenta">
+                <label for="cliente">Cliente:</label>
+                <input type="text" id="cliente" required>
+
+                <label for="direccion">Direccion:</label>
+                <input type="text" id="direccion" required>
+            
+                <label for="cantidadBidones">Cantidad de Bidones:</label>
+                <input type="number" id="cantidadBidones" required>
+            
+                <label for="precioTotal">Precio Total:</label>
+                <input type="number" id="precioTotal" required>
+            
+                <label for="metodoPago">Método de Pago:</label>
+                <select id="metodoPago" required>
+                    <option value="Efectivo">Efectivo</option>
+                    <option value="Transferencia">Transferencia</option>
+                    <option value="Yape">Yape</option>
+                    <option value="Yape">Plin</option>
+                    <option value="Yape">Izipay</option>
+                    <option value="Yape">Bim</option>
+                    <option value="Gratis">Gratis</option>
+                </select>
+                <label for="Nombredelpagador">Nombre del pagador:</label>
+                <input type="text" id="nombrePagador" placeholder="Nombre del pagador" />
+                <label for="comprobantePagoFile">Comprobante:</label>
+                <input type="file" id="comprobantePagoFile" accept="image/*" />
+                <label>
+                ¿Tiene deuda?
+                <input type="checkbox" id="tieneDeuda" />
+                </label>
+                <button type="submit" id="submitBtn">Registrar Venta</button>
+            </form>
+            
+            <script src="/js/dashboard.js"></script>
+            
+        </section>
+
+        <section class="section2">
+            <h2>Mis Entregas</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cliente</th>
+                        <th>Dirección</th>
+                        <th>Bidones</th>
+                        <th>Monto</th>
+                        <th>Fecha</th>
+                        <th>Nombre del pagador</th>
+                        <th>¿Deuda?</th>
+                        <th>Comprobante</th>
+                    </tr>
+                </thead>
+                <tbody id="historialVentas"></tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="../js/dashboard.js"></script>
+</body>
+</html>
